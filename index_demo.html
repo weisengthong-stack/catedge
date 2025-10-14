@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Financial AI Chatbot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+        }
+
+        /* Login Page Styles */
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 400px;
+            text-align: center;
+        }
+
+        .login-logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .login-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .login-error {
+            color: #dc3545;
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8d7da;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Main App Styles */
+        .main-app {
+            display: none;
+            background-color: #f5f5f5;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .app-header {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            padding: 8px 16px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .logout-btn:hover {
+            background: #c82333;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            height: calc(100vh - 120px);
+        }
+        
+        .sidebar {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        .file-input-label {
+            display: block;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        
+        .file-input-label:hover {
+            background: #0056b3;
+        }
+        
+        .document-list {
+            margin-top: 20px;
+        }
+        
+        .document-item {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .document-info {
+            flex: 1;
+        }
+        
+        .document-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .document-meta {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .delete-btn:hover {
+            background: #c82333;
+        }
+        
+        .chat-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .chat-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            border-radius: 15px;
+            max-width: 80%;
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
+        
+        .user-message {
+            background: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+        
+        .ai-message {
+            background: #f8f9fa;
+            color: #333;
+            align-self: flex-start;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Enhanced AI message formatting for financial data */
+        .ai-message h1, .ai-message h2, .ai-message h3 {
+            color: #2c3e50;
+            margin: 20px 0 15px 0;
+            font-weight: 600;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+
+        .ai-message h1 {
+            font-size: 24px;
+        }
+
+        .ai-message h2 {
+            font-size: 20px;
+        }
+
+        .ai-message h3 {
+            font-size: 18px;
+        }
+
+        .ai-message h1:first-child,
+        .ai-message h2:first-child,
+        .ai-message h3:first-child {
+            margin-top: 0;
+        }
+
+        .ai-message p {
+            margin: 12px 0;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Enhanced table styling for financial data */
+        .ai-message table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+
+        .ai-message th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 12px;
+        }
+
+        .ai-message td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+        }
+
+        .ai-message tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .ai-message tr:hover {
+            background: #e3f2fd;
+            transition: background-color 0.2s ease;
+        }
+
+        .ai-message tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Financial number highlighting */
+        .ai-message .financial-number {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .ai-message .percentage {
+            background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .ai-message .currency {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        /* List styling */
+        .ai-message ul, .ai-message ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .ai-message li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        /* Code and preformatted text */
+        .ai-message code {
+            background: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .ai-message pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #007bff;
+            margin: 15px 0;
+        }
+
+        /* Blockquotes */
+        .ai-message blockquote {
+            border-left: 4px solid #007bff;
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .sources {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #dee2e6;
+            font-style: italic;
+        }
+        
+        .input-container {
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 10px;
+        }
+        
+        #messageInput {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #007bff;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            color: #dc3545;
+            padding: 10px;
+            background: #f8d7da;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .success-message {
+            color: #155724;
+            padding: 10px;
+            background: #d4edda;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Search mode indicator */
+        .search-mode-indicator {
+            background: #e3f2fd;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-container">
+        <div class="login-card">
+            <div class="login-logo">💰</div>
+            <h1 class="login-title">CatalystLex AI</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input" required>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+                <div id="loginError" class="login-error" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" class="main-app">
+        <div class="app-header">
+            <h1>💰 CatalystLex AI Assistant</h1>
+            <div class="user-info">
+                <span>Welcome, <strong id="currentUser"></strong></span>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="sidebar">
+                <h2>📚 Document Library</h2>
+                
+                <div class="upload-section">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="fileInput" multiple accept=".txt,.md,.py,.js,.html,.css,.json,.pdf">
+                        <label for="fileInput" class="file-input-label">
+                            📤 Upload Documents
+                        </label>
+                    </div>
+                    <div id="uploadStatus"></div>
+                </div>
+                
+                <div class="stats" id="stats">
+                    <strong>0</strong> documents | <strong>0</strong> chunks
+                </div>
+                
+                <div class="document-list" id="documentList">
+                    <!-- Documents will be listed here -->
+                </div>
+                
+                <button onclick="clearAll()" style="width: 100%; background: #dc3545; margin-top: 20px;">
+                    🗑️ Clear All
+                </button>
+            </div>
+            
+            <div class="main-content">
+                <div class="chat-header">
+                    <h2>💬 Document Analyser</h2>
+                    <p>Ask questions about data in your uploaded documents. The AI will automatically read, digest and return information.</p>
+                    <div class="search-mode-indicator" id="searchModeIndicator">
+                        Enhanced mode: Advanced financial analysis with table formatting
+                    </div>
+                </div>
+                
+                <div class="chat-container" id="chatContainer">
+                    <div class="message ai-message">
+                        <h3>Welcome to CatalystLex! 🎯</h3>
+                        <p>I'm designed to help you analyze your documents. Upload your documents and ask questions!</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <select id="searchMode" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-right: 10px;">
+                        <option value="basic">Basic (5 chunks)</option>
+                        <option value="enhanced" selected>Enhanced (15 chunks)</option>
+                        <option value="comprehensive">Comprehensive (30 chunks)</option>
+                    </select>
+                    <input type="text" id="messageInput" placeholder="Ask about financial data in your documents..." disabled>
+                    <button id="sendButton" onclick="sendMessage()" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Authentication
+        const validUsers = {
+            'admin': 'password123',
+            'user1': 'pass123',
+            'demo': 'demo123'
+        };
+
+        let currentUser = null;
+        let isProcessing = false;
+
+        // Check if user is already logged in
+        window.onload = function() {
+            const savedUser = localStorage.getItem('currentUser');
+            if (savedUser && validUsers[savedUser]) {
+                login(savedUser);
+            }
+        };
+
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (validUsers[username] && validUsers[username] === password) {
+                localStorage.setItem('currentUser', username);
+                login(username);
+            } else {
+                showLoginError('Invalid username or password');
+            }
+        });
+
+        function login(username) {
+            currentUser = username;
+            document.getElementById('currentUser').textContent = username;
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('mainApp').style.display = 'block';
+            loadDocuments();
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            currentUser = null;
+            document.getElementById('loginPage').style.display = 'flex';
+            document.getElementById('mainApp').style.display = 'none';
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        }
+
+        function showLoginError(message) {
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Enhanced response formatting function with financial highlighting
+        function formatAIResponse(text) {
+            // Convert markdown to HTML
+            let html = text;
+            
+            // Headers
+            html = html.replace(/^### (.*$)/gm, '<h3>$1</h3>');
+            html = html.replace(/^## (.*$)/gm, '<h2>$1</h2>');
+            html = html.replace(/^# (.*$)/gm, '<h1>$1</h1>');
+            
+            // Tables
+            const tableRegex = /\|(.+)\|\n\|[-\s|]+\|\n((?:\|.+\|\n?)*)/g;
+            html = html.replace(tableRegex, function(match, header, rows) {
+                let tableHtml = '<table>';
+                
+                // Header
+                const headerCells = header.split('|').map(cell => cell.trim()).filter(cell => cell);
+                tableHtml += '<tr>';
+                headerCells.forEach(cell => {
+                    tableHtml += `<th>${cell}</th>`;
+                });
+                tableHtml += '</tr>';
+                
+                // Rows
+                const rowLines = rows.trim().split('\n');
+                rowLines.forEach(row => {
+                    if (row.trim()) {
+                        const cells = row.split('|').map(cell => cell.trim()).filter(cell => cell);
+                        tableHtml += '<tr>';
+                        cells.forEach(cell => {
+                            // Highlight financial numbers
+                            let formattedCell = highlightFinancialNumbers(cell);
+                            tableHtml += `<td>${formattedCell}</td>`;
+                        });
+                        tableHtml += '</tr>';
+                    }
+                });
+                
+                tableHtml += '</table>';
+                return tableHtml;
+            });
+            
+            // Bold text
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Lists
+            html = html.replace(/^\* (.+)$/gm, '<li>$1</li>');
+            html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+            
+            // Line breaks
+            html = html.replace(/\n\n/g, '</p><p>');
+            html = html.replace(/\n/g, '<br>');
+            
+            // Wrap in paragraphs
+            if (!html.startsWith('<')) {
+                html = '<p>' + html + '</p>';
+            }
+            
+            // Highlight financial numbers in regular text
+            html = highlightFinancialNumbers(html);
+            
+            return html;
+        }
+
+        function highlightFinancialNumbers(text) {
+            // Currency patterns
+            text = text.replace(/(RM\s*\d+(?:,\d{3})*(?:\.\d+)?(?:\s*(?:million|mil|billion|bil|thousand|k))?)/gi, 
+                '<span class="currency">$1</span>');
+            
+            text = text.replace(/(\$\s*\d+(?:,\d{3})*(?:\.\d+)?(?:\s*(?:million|mil|billion|bil|thousand|k))?)/gi, 
+                '<span class="currency">$1</span>');
+            
+            // Percentages
+            text = text.replace(/(\d+(?:\.\d+)?\s*%)/g, '<span class="percentage">$1</span>');
+            
+            // Ratios
+            text = text.replace(/(\d+(?:\.\d+)?\s*times)/gi, '<span class="financial-number">$1</span>');
+            
+            return text;
+        }
+
+        // Update search mode indicator
+        document.getElementById('searchMode').addEventListener('change', function() {
+            const mode = this.value;
+            const indicator = document.getElementById('searchModeIndicator');
+            
+            switch(mode) {
+                case 'basic':
+                    indicator.textContent = 'Basic mode: Quick responses with essential information';
+                    break;
+                case 'enhanced':
+                    indicator.textContent = 'Enhanced mode: Advanced financial analysis with table formatting';
+                    break;
+                case 'comprehensive':
+                    indicator.textContent = 'Comprehensive mode: Detailed analysis with extensive context';
+                    break;
+            }
+        });
+
+        // File upload handling
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                uploadFiles(files);
+            }
+        });
+
+        // FIXED: Upload function with correct endpoint and response handling
+        async function uploadFiles(files) {
+            const formData = new FormData();
+            for (let file of files) {
+                formData.append('files', file);
+            }
+
+            const statusDiv = document.getElementById('uploadStatus');
+            statusDiv.innerHTML = '<div class="loading"></div> Uploading files...';
+
+            try {
+                // FIXED: Use correct endpoint
+                const response = await fetch('/upload_multiple', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                console.log('Upload response:', result); // Debug log
+
+                if (response.ok) {
+                    // FIXED: Use correct property names from Flask response
+                    const uploadedCount = result.uploaded ? result.uploaded.length : 0;
+                    const totalChunks = result.total_chunks || 0;
+                    
+                    statusDiv.innerHTML = `<div class="success-message">Successfully uploaded ${uploadedCount} files with ${totalChunks} chunks</div>`;
+                    
+                    // Show any errors that occurred
+                    if (result.errors && result.errors.length > 0) {
+                        statusDiv.innerHTML += `<div class="error-message">Some files had errors: ${result.errors.join(', ')}</div>`;
+                    }
+                    
+                    loadDocuments();
+                    
+                    // Enable chat input if we have documents
+                    if (uploadedCount > 0) {
+                        document.getElementById('messageInput').disabled = false;
+                        document.getElementById('sendButton').disabled = false;
+                    }
+                } else {
+                    statusDiv.innerHTML = `<div class="error-message">Upload failed: ${result.error || 'Unknown error'}</div>`;
+                }
+            } catch (error) {
+                console.error('Upload error:', error); // Debug log
+                statusDiv.innerHTML = `<div class="error-message">Upload error: ${error.message}</div>`;
+            }
+
+            // Clear the file input
+            document.getElementById('fileInput').value = '';
+            
+            // Clear status after 10 seconds
+            setTimeout(() => {
+                statusDiv.innerHTML = '';
+            }, 10000);
+        }
+
+        async function loadDocuments() {
+            try {
+                const response = await fetch('/documents');
+                const result = await response.json();
+
+                if (response.ok) {
+                    updateDocumentList(result.documents);
+                    updateStats(result.documents.length, result.total_chunks);
+                    
+                    // Enable chat if documents are loaded
+                    if (result.documents.length > 0) {
+                        document.getElementById('messageInput').disabled = false;
+                        document.getElementById('sendButton').disabled = false;
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading documents:', error);
+            }
+        }
+
+        function updateDocumentList(documents) {
+            const listDiv = document.getElementById('documentList');
+            
+            if (documents.length === 0) {
+                listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 20px;">No documents uploaded</p>';
+                return;
+            }
+
+            listDiv.innerHTML = documents.map(doc => `
+                <div class="document-item">
+                    <div class="document-info">
+                        <div class="document-name">${doc.filename}</div>
+                        <div class="document-meta">
+                            Uploaded: ${new Date(doc.upload_time).toLocaleDateString()}<br>
+                            Size: ${(doc.size / 1024).toFixed(1)} KB
+                        </div>
+                    </div>
+                    <button class="delete-btn" onclick="deleteDocument('${doc.id}')">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function updateStats(docCount, chunkCount) {
+            document.getElementById('stats').innerHTML = `<strong>${docCount}</strong> documents | <strong>${chunkCount}</strong> chunks`;
+        }
+
+        async function deleteDocument(docId) {
+            if (!confirm('Are you sure you want to delete this document?')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`/documents/${docId}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok) {
+                    loadDocuments();
+                } else {
+                    const result = await response.json();
+                    alert(`Delete failed: ${result.error}`);
+                }
+            } catch (error) {
+                alert(`Delete error: ${error.message}`);
+            }
+        }
+
+        // FIXED: Clear function with correct endpoint
+        async function clearAll() {
+            if (!confirm('Are you sure you want to clear all documents? This cannot be undone.')) {
+                return;
+            }
+
+            try {
+                // FIXED: Use correct endpoint
+                const response = await fetch('/clear_all', {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    loadDocuments();
+                    document.getElementById('chatContainer').innerHTML = `
+                        <div class="message ai-message">
+                            <h3>Welcome! 
+                    `;
+                    
+                    // Disable chat input
+                    document.getElementById('messageInput').disabled = true;
+                    document.getElementById('sendButton').disabled = true;
+                } else {
+                    const result = await response.json();
+                    alert(`Clear failed: ${result.error}`);
+                }
+            } catch (error) {
+                alert(`Clear error: ${error.message}`);
+            }
+        }
+
+        // Chat functionality
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // FIXED: Send message function with proper response handling
+        async function sendMessage() {
+            if (isProcessing) return;
+
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (!message) return;
+
+            isProcessing = true;
+            const sendButton = document.getElementById('sendButton');
+            const originalText = sendButton.textContent;
+            sendButton.textContent = 'Sending...';
+            sendButton.disabled = true;
+
+            // Add user message to chat
+            addMessage(message, 'user');
+            messageInput.value = '';
+
+            try {
+                const searchMode = document.getElementById('searchMode').value;
+                
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        search_mode: searchMode
+                    })
+                });
+
+                const result = await response.json();
+                console.log('Chat response:', result); // Debug log
+
+                if (response.ok) {
+                    // FIXED: Handle the actual response structure from Flask
+                    addMessage(result.response, 'ai', result.sources, result.chunks_used);
+                } else {
+                    addMessage(`Error: ${result.error || 'Unknown error'}`, 'ai');
+                }
+            } catch (error) {
+                console.error('Chat error:', error); // Debug log
+                addMessage(`Error: ${error.message}`, 'ai');
+            }
+
+            isProcessing = false;
+            sendButton.textContent = originalText;
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+
+        // FIXED: Add message function with proper source handling
+        function addMessage(content, type, sources = null, chunksUsed = null) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}-message`;
+
+            if (type === 'ai') {
+                // Format AI response with enhanced styling
+                messageDiv.innerHTML = formatAIResponse(content);
+                
+                // FIXED: Add sources if available with proper structure
+                if (sources && sources.length > 0) {
+                    const sourcesDiv = document.createElement('div');
+                    sourcesDiv.className = 'sources';
+                    
+                    // Handle both array of strings and array of objects
+                    let sourceText;
+                    if (typeof sources[0] === 'string') {
+                        sourceText = sources.join(', ');
+                    } else {
+                        sourceText = sources.map(s => 
+                            typeof s === 'object' ? 
+                            `${s.filename || s} (chunk ${(s.chunk_index || 0) + 1})` : 
+                            s
+                        ).join(', ');
+                    }
+                    
+                    sourcesDiv.innerHTML = `
+                        <strong>Sources:</strong> ${sourceText}
+                        ${chunksUsed ? `<br><strong>Chunks analyzed:</strong> ${chunksUsed}` : ''}
+                    `;
+                    messageDiv.appendChild(sourcesDiv);
+                }
+            } else {
+                messageDiv.textContent = content;
+            }
+
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Initialize
+        loadDocuments();
+    </script>
+</body>
+</html>

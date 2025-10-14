@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Customer Analysis AI with Metadata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .app-header {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            height: calc(100vh - 120px);
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .metadata-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .metadata-section h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .category-tag {
+            padding: 6px 12px;
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+            border-radius: 20px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .category-tag:hover {
+            background: #bbdefb;
+        }
+
+        .category-tag.selected {
+            background: #1976d2;
+            color: white;
+        }
+
+        .category-tag.found {
+            background: #c8e6c9;
+            color: #388e3c;
+            border-color: #a5d6a7;
+        }
+
+        .category-tag.found.selected {
+            background: #388e3c;
+            color: white;
+        }
+        
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        .file-input-label {
+            display: block;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        
+        .file-input-label:hover {
+            background: #0056b3;
+        }
+        
+        .document-list {
+            margin-top: 20px;
+        }
+        
+        .document-item {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .document-info {
+            flex: 1;
+        }
+        
+        .document-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .document-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .document-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .document-category {
+            padding: 2px 6px;
+            background: #e8f5e8;
+            color: #2e7d32;
+            font-size: 10px;
+            border-radius: 10px;
+        }
+
+        .document-actions {
+            display: flex;
+            gap: 5px;
+            justify-content: flex-end;
+        }
+        
+        .delete-btn, .metadata-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .metadata-btn {
+            background: #17a2b8;
+        }
+        
+        .delete-btn:hover {
+            background: #c82333;
+        }
+
+        .metadata-btn:hover {
+            background: #138496;
+        }
+        
+        .chat-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .chat-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
+        
+        .user-message {
+            background: #007bff;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            align-self: flex-end;
+            max-width: 70%;
+            margin-left: auto;
+        }
+        
+        .ai-message {
+            color: #333;
+            align-self: flex-start;
+            width: 100%;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+
+        .ai-message h1, .ai-message h2, .ai-message h3 {
+            color: #333;
+            margin: 15px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .ai-message h1 { font-size: 20px; }
+        .ai-message h2 { font-size: 18px; }
+        .ai-message h3 { font-size: 16px; }
+
+        .ai-message p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .ai-message ul, .ai-message ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .ai-message ul { list-style-type: disc; }
+        .ai-message ol { list-style-type: decimal; }
+
+        .ai-message ul li, .ai-message ol li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .info-box, .warning-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 12px;
+            margin: 15px 0;
+        }
+
+        .key-value-pair {
+            margin: 5px 0;
+        }
+
+        .key-value-pair .key {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .sources {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #dee2e6;
+            font-style: italic;
+        }
+
+        .metadata-info {
+            font-size: 11px;
+            color: #888;
+            margin-top: 5px;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 3px;
+        }
+        
+        .input-container {
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        #messageInput {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #007bff;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            color: #dc3545;
+            padding: 10px;
+            background: #f8d7da;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .success-message {
+            color: #155724;
+            padding: 10px;
+            background: #d4edda;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .search-mode-indicator {
+            background: #e3f2fd;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .quick-action-btn {
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .quick-action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .category-quick-actions {
+            margin-bottom: 15px;
+        }
+
+        .category-quick-btn {
+            padding: 6px 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 11px;
+            margin: 2px;
+            transition: all 0.2s;
+        }
+
+        .category-quick-btn:hover {
+            background: #1e7e34;
+            transform: scale(1.05);
+        }
+
+        .selected-categories-display {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-header">
+        <h1>🏢 Enhanced Customer Analysis AI</h1>
+        <p>Upload customer documents and analyze business information with AI-powered metadata extraction</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>📚 Document Library</h2>
+            
+            <div class="upload-section">
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileInput" multiple accept=".txt,.md,.py,.js,.html,.css,.json,.pdf">
+                    <label for="fileInput" class="file-input-label">
+                        📤 Upload Documents
+                    </label>
+                </div>
+                <div id="uploadStatus"></div>
+            </div>
+
+            <div class="metadata-section">
+                <h3>🏷️ Content Categories</h3>
+                <div class="category-filters" id="categoryFilters">
+                    <!-- Categories will be populated here -->
+                </div>
+                <div id="selectedCategoriesDisplay" class="selected-categories-display" style="display: none;">
+                    <strong>Active Filters:</strong> <span id="selectedCategoriesList"></span>
+                    <button onclick="clearCategoryFilters()" style="margin-left: 10px; padding: 2px 6px; font-size: 10px;">Clear</button>
+                </div>
+            </div>
+            
+            <div class="stats" id="stats">
+                <strong>0</strong> documents | <strong>0</strong> categories found
+            </div>
+            
+            <div class="document-list" id="documentList">
+                <!-- Documents will be listed here -->
+            </div>
+            
+            <button onclick="clearAll()" style="width: 100%; background: #dc3545; margin-top: 20px;">
+                🗑️ Clear All
+            </button>
+        </div>
+        
+        <div class="main-content">
+            <div class="chat-header">
+                <h2>💬 Enhanced Document Analysis</h2>
+                <p>Upload documents with automatic metadata extraction. Search by content categories for precise analysis.</p>
+                <div class="search-mode-indicator" id="searchModeIndicator">
+                    Enhanced mode: Comprehensive analysis with metadata categorization
+                </div>
+                <div class="quick-actions">
+                    <button class="quick-action-btn" onclick="sendQuickMessage('Extract all customer information')">📊 Extract Customer Info</button>
+                    <button class="quick-action-btn" onclick="sendQuickMessage('What are the key business details?')">🏢 Business Details</button>
+                    <button class="quick-action-btn" onclick="sendQuickMessage('Show contact information')">📞 Contact Info</button>
+                    <button class="quick-action-btn" onclick="sendQuickMessage('Analyze financial information')">💰 Financial Analysis</button>
+                </div>
+                <div class="category-quick-actions">
+                    <button class="category-quick-btn" onclick="searchSpecificCategory(['rating_action_basis'])">Rating Basis</button>
+                    <button class="category-quick-btn" onclick="searchSpecificCategory(['rating_drivers_positive'])">Positive Drivers</button>
+                    <button class="category-quick-btn" onclick="searchSpecificCategory(['rating_drivers_negative'])">Negative Drivers</button>
+                    <button class="category-quick-btn" onclick="searchSpecificCategory(['esg_descriptor'])">ESG Factors</button>
+                    <button class="category-quick-btn" onclick="searchSpecificCategory(['financial_statement_pages'])">Financials</button>
+                </div>
+            </div>
+            
+            <div class="chat-container" id="chatContainer">
+                <div class="message ai-message">
+                    <h1>Welcome to Enhanced Customer Analysis AI!</h1>
+                    <p>I now feature advanced metadata extraction that automatically categorizes your documents into:</p>
+                    <ul>
+                        <li><strong>Rating Action Basis:</strong> Fundamental reasoning behind credit decisions</li>
+                        <li><strong>Rating Drivers (Positive/Negative):</strong> Factors supporting or constraining ratings</li>
+                        <li><strong>Rating Triggers (Upgrade/Downgrade):</strong> Conditions for rating changes</li>
+                        <li><strong>ESG Descriptors:</strong> Environmental, social, and governance factors</li>
+                        <li><strong>Related Criteria:</strong> Applicable methodologies and criteria</li>
+                        <li><strong>Specific Ratings:</strong> Current ratings and rating details</li>
+                        <li><strong>Financial Statements:</strong> Financial data and metrics</li>
+                        <li><strong>Introductory Pages:</strong> Executive summaries and overviews</li>
+                    </ul>
+                    <div class="info-box">
+                        <strong>New Feature:</strong> Use category filters on the left to search specific document sections, or use the category quick buttons above!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <div class="input-controls">
+                    <select id="searchMode" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        <option value="basic">Basic (5 chunks)</option>
+                        <option value="enhanced" selected>Enhanced (10 chunks)</option>
+                        <option value="comprehensive">Comprehensive (15 chunks)</option>
+                    </select>
+                    <input type="text" id="messageInput" placeholder="Ask about customer information in your documents..." disabled>
+                    <button id="sendButton" onclick="sendMessage()" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isProcessing = false;
+        let availableCategories = [];
+        let selectedCategories = [];
+        let documentsWithCategories = {};
+
+        // Initialize available categories
+        const categoryDefinitions = {
+            'rating_action_basis': 'Rating Action Basis',
+            'rating_drivers_positive': 'Positive Drivers',
+            'rating_drivers_negative': 'Negative Drivers', 
+            'rating_triggers_upgrade': 'Upgrade Triggers',
+            'rating_triggers_downgrade': 'Downgrade Triggers',
+            'esg_descriptor': 'ESG Factors',
+            'related_criteria': 'Related Criteria',
+            'specific_ratings': 'Specific Ratings',
+            'introductory_pages': 'Introductory Pages',
+            'financial_statement_pages': 'Financial Statements'
+        };
+
+        // Initialize category filters
+        function initializeCategoryFilters() {
+            const filtersContainer = document.getElementById('categoryFilters');
+            filtersContainer.innerHTML = '';
+            
+            Object.keys(categoryDefinitions).forEach(category => {
+                const tag = document.createElement('div');
+                tag.className = 'category-tag';
+                tag.textContent = categoryDefinitions[category];
+                tag.dataset.category = category;
+                tag.onclick = () => toggleCategory(category);
+                filtersContainer.appendChild(tag);
+            });
+        }
+
+        function toggleCategory(category) {
+            const tag = document.querySelector(`[data-category="${category}"]`);
+            
+            if (selectedCategories.includes(category)) {
+                selectedCategories = selectedCategories.filter(c => c !== category);
+                tag.classList.remove('selected');
+            } else {
+                selectedCategories.push(category);
+                tag.classList.add('selected');
+            }
+            
+            updateSelectedCategoriesDisplay();
+        }
+
+        function updateSelectedCategoriesDisplay() {
+            const display = document.getElementById('selectedCategoriesDisplay');
+            const list = document.getElementById('selectedCategoriesList');
+            
+            if (selectedCategories.length > 0) {
+                display.style.display = 'block';
+                list.textContent = selectedCategories.map(cat => categoryDefinitions[cat]).join(', ');
+            } else {
+                display.style.display = 'none';
+            }
+        }
+
+        function clearCategoryFilters() {
+            selectedCategories = [];
+            document.querySelectorAll('.category-tag').forEach(tag => {
+                tag.classList.remove('selected');
+            });
+            updateSelectedCategoriesDisplay();
+        }
+
+        function updateCategoryAvailability(documentsData) {
+            // Reset category tags
+            document.querySelectorAll('.category-tag').forEach(tag => {
+                tag.classList.remove('found');
+            });
+
+            // Track which categories are found in documents
+            const foundCategories = new Set();
+            
+            if (documentsData && documentsData.documents) {
+                documentsData.documents.forEach(doc => {
+                    if (doc.categories_found) {
+                        doc.categories_found.forEach(cat => foundCategories.add(cat));
+                    }
+                });
+            }
+
+            // Mark found categories
+            foundCategories.forEach(category => {
+                const tag = document.querySelector(`[data-category="${category}"]`);
+                if (tag) {
+                    tag.classList.add('found');
+                }
+            });
+        }
+
+        function searchSpecificCategory(categories) {
+            // Set selected categories
+            selectedCategories = [...categories];
+            
+            // Update UI
+            document.querySelectorAll('.category-tag').forEach(tag => {
+                if (categories.includes(tag.dataset.category)) {
+                    tag.classList.add('selected');
+                } else {
+                    tag.classList.remove('selected');
+                }
+            });
+            
+            updateSelectedCategoriesDisplay();
+            
+            // Send search message
+            const categoryNames = categories.map(cat => categoryDefinitions[cat]).join(' and ');
+            sendMessage(`Extract information about ${categoryNames}`);
+        }
+
+        function sendQuickMessage(message) {
+            document.getElementById('messageInput').value = message;
+            sendMessage();
+        }
+
+        // Enhanced response formatting
+        function formatAIResponse(text) {
+            let formattedText = text;
+            
+            // Convert markdown-style headers
+            formattedText = formattedText.replace(/^### (.*$)/gm, '<h3>$1</h3>');
+            formattedText = formattedText.replace(/^## (.*$)/gm, '<h2>$1</h2>');
+            formattedText = formattedText.replace(/^# (.*$)/gm, '<h1>$1</h1>');
+            
+            // Convert double line breaks to paragraphs
+            formattedText = formattedText.replace(/\n\n/g, '</p><p>');
+            formattedText = '<p>' + formattedText + '</p>';
+            
+            // Clean up empty paragraphs
+            formattedText = formattedText.replace(/<p><\/p>/g, '');
+            formattedText = formattedText.replace(/<p>\s*<h/g, '<h');
+            formattedText = formattedText.replace(/<\/h([1-6])>\s*<\/p>/g, '</h$1>');
+            
+            // Convert bullet points to lists
+            formattedText = convertToLists(formattedText);
+            
+            return formattedText;
+        }
+
+        function convertToLists(text) {
+            const lines = text.split('\n');
+            let inList = false;
+            let listType = '';
+            let result = [];
+            
+            for (let line of lines) {
+                line = line.trim();
+                
+                if (line.match(/^[-*•]\s+/)) {
+                    if (!inList) {
+                        result.push('<ul>');
+                        inList = true;
+                        listType = 'ul';
+                    }
+                    const content = line.replace(/^[-*•]\s+/, '');
+                    result.push(`<li>${content}</li>`);
+                } else if (line.match(/^\d+\.\s+/)) {
+                    if (!inList || listType !== 'ol') {
+                        if (inList && listType === 'ul') {
+                            result.push('</ul>');
+                        }
+                        result.push('<ol>');
+                        inList = true;
+                        listType = 'ol';
+                    }
+                    const content = line.replace(/^\d+\.\s+/, '');
+                    result.push(`<li>${content}</li>`);
+                } else {
+                    if (inList) {
+                        result.push(`</${listType}>`);
+                        inList = false;
+                        listType = '';
+                    }
+                    if (line) {
+                        result.push(line);
+                    }
+                }
+            }
+            
+            if (inList) {
+                result.push(`</${listType}>`);
+            }
+            
+            return result.join('\n');
+        }
+
+        // File upload handling
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                uploadFiles(files);
+            }
+        });
+
+        async function uploadFiles(files) {
+            const formData = new FormData();
+            for (let file of files) {
+                formData.append('files', file);
+            }
+
+            const statusDiv = document.getElementById('uploadStatus');
+            statusDiv.innerHTML = '<div class="loading"></div> Uploading and analyzing files...';
+
+            try {
+                const response = await fetch('/upload_multiple', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                console.log('Enhanced upload response:', result);
+
+                if (response.ok) {
+                    const uploadedCount = result.uploaded ? result.uploaded.length : 0;
+                    
+                    statusDiv.innerHTML = `<div class="success-message">Successfully uploaded ${uploadedCount} files with metadata extraction</div>`;
+                    
+                    if (result.errors && result.errors.length > 0) {
+                        statusDiv.innerHTML += `<div class="error-message">Some files had errors: ${result.errors.join(', ')}</div>`;
+                    }
+                    
+                    loadDocuments();
+                    
+                    if (uploadedCount > 0) {
+                        document.getElementById('messageInput').disabled = false;
+                        document.getElementById('sendButton').disabled = false;
+                    }
+                } else {
+                    statusDiv.innerHTML = `<div class="error-message">Upload failed: ${result.error || 'Unknown error'}</div>`;
+                }
+            } catch (error) {
+                console.error('Upload error:', error);
+                statusDiv.innerHTML = `<div class="error-message">Upload error: ${error.message}</div>`;
+            }
+
+            document.getElementById('fileInput').value = '';
+            
+            setTimeout(() => {
+                statusDiv.innerHTML = '';
+            }, 10000);
+        }
+
+        async function loadDocuments() {
+            try {
+                const response = await fetch('/documents_enhanced');
+                const result = await response.json();
+
+                if (response.ok) {
+                    updateDocumentList(result.documents);
+                    updateStats(result.documents);
+                    updateCategoryAvailability(result);
+                    
+                    if (result.documents.length > 0) {
+                        document.getElementById('messageInput').disabled = false;
+                        document.getElementById('sendButton').disabled = false;
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading documents:', error);
+            }
+        }
+
+        function updateDocumentList(documents) {
+            const listDiv = document.getElementById('documentList');
+            
+            if (documents.length === 0) {
+                listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 20px;">No documents uploaded</p>';
+                return;
+            }
+
+            listDiv.innerHTML = documents.map(doc => {
+                const categoriesHtml = doc.categories_found && doc.categories_found.length > 0 ? 
+                    `<div class="document-categories">
+                        ${doc.categories_found.map(cat => 
+                            `<span class="document-category">${categoryDefinitions[cat] || cat}</span>`
+                        ).join('')}
+                    </div>` : '';
+
+                return `
+                    <div class="document-item">
+                        <div class="document-info">
+                            <div class="document-name">${doc.filename}</div>
+                            <div class="document-meta">
+                                Uploaded: ${new Date(doc.upload_time).toLocaleDateString()}<br>
+                                Size: ${(doc.size / 1024).toFixed(1)} KB | Pages: ${doc.total_pages || 'N/A'}
+                            </div>
+                            ${categoriesHtml}
+                        </div>
+                        <div class="document-actions">
+                            <button class="metadata-btn" onclick="showDocumentMetadata('${doc.id}')">Metadata</button>
+                            <button class="delete-btn" onclick="deleteDocument('${doc.id}')">Delete</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateStats(documents) {
+            const totalCategories = new Set();
+            documents.forEach(doc => {
+                if (doc.categories_found) {
+                    doc.categories_found.forEach(cat => totalCategories.add(cat));
+                }
+            });
+
+            document.getElementById('stats').innerHTML = 
+                `<strong>${documents.length}</strong> documents | <strong>${totalCategories.size}</strong> categories found`;
+        }
+
+        async function showDocumentMetadata(docId) {
+            try {
+                const response = await fetch(`/document_metadata/${docId}`);
+                const result = await response.json();
+
+                if (response.ok) {
+                    const metadata = result.document_metadata;
+                    let metadataHtml = `
+                        <h3>Metadata for ${metadata.filename}</h3>
+                        <p><strong>Pages:</strong> ${metadata.total_pages}</p>
+                        <p><strong>Categories found:</strong> ${metadata.categories_found.length}</p>
+                    `;
+
+                    if (metadata.category_details) {
+                        metadataHtml += '<h4>Category Details:</h4>';
+                        Object.entries(metadata.category_details).forEach(([category, details]) => {
+                            metadataHtml += `
+                                <p><strong>${categoryDefinitions[category] || category}:</strong> 
+                                Pages ${details.page_range} (${details.total_pages} pages)</p>
+                            `;
+                        });
+                    }
+
+                    alert(metadataHtml.replace(/<[^>]*>/g, '\n').replace(/\n+/g, '\n'));
+                } else {
+                    alert(`Error loading metadata: ${result.error}`);
+                }
+            } catch (error) {
+                alert(`Error loading metadata: ${error.message}`);
+            }
+        }
+
+        async function deleteDocument(docId) {
+            if (!confirm('Are you sure you want to delete this document?')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`/documents/${docId}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok) {
+                    loadDocuments();
+                } else {
+                    const result = await response.json();
+                    alert(`Delete failed: ${result.error}`);
+                }
+            } catch (error) {
+                alert(`Delete error: ${error.message}`);
+            }
+        }
+
+        async function clearAll() {
+            if (!confirm('Are you sure you want to clear all documents? This cannot be undone.')) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/clear_all_enhanced', {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    loadDocuments();
+                    clearCategoryFilters();
+                    document.getElementById('chatContainer').innerHTML = `
+                        <div class="message ai-message">
+                            <h1>Welcome to Enhanced Customer Analysis AI!</h1>
+                            <p>I now feature advanced metadata extraction that automatically categorizes your documents into:</p>
+                            <ul>
+                                <li><strong>Rating Action Basis:</strong> Fundamental reasoning behind credit decisions</li>
+                                <li><strong>Rating Drivers (Positive/Negative):</strong> Factors supporting or constraining ratings</li>
+                                <li><strong>Rating Triggers (Upgrade/Downgrade):</strong> Conditions for rating changes</li>
+                                <li><strong>ESG Descriptors:</strong> Environmental, social, and governance factors</li>
+                                <li><strong>Related Criteria:</strong> Applicable methodologies and criteria</li>
+                                <li><strong>Specific Ratings:</strong> Current ratings and rating details</li>
+                                <li><strong>Financial Statements:</strong> Financial data and metrics</li>
+                                <li><strong>Introductory Pages:</strong> Executive summaries and overviews</li>
+                            </ul>
+                            <div class="info-box">
+                                <strong>New Feature:</strong> Use category filters on the left to search specific document sections, or use the category quick buttons above!
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.getElementById('messageInput').disabled = true;
+                    document.getElementById('sendButton').disabled = true;
+                } else {
+                    const result = await response.json();
+                    alert(`Clear failed: ${result.error}`);
+                }
+            } catch (error) {
+                alert(`Clear error: ${error.message}`);
+            }
+        }
+
+        // Enhanced chat functionality
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        async function sendMessage() {
+            if (isProcessing) return;
+
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (!message) return;
+
+            isProcessing = true;
+            const sendButton = document.getElementById('sendButton');
+            const originalText = sendButton.textContent;
+            sendButton.textContent = 'Sending...';
+            sendButton.disabled = true;
+
+            addMessage(message, 'user');
+            messageInput.value = '';
+
+            try {
+                const searchMode = document.getElementById('searchMode').value;
+                
+                const requestBody = {
+                    message: message,
+                    search_mode: searchMode
+                };
+
+                // Add selected categories to request if any are selected
+                if (selectedCategories.length > 0) {
+                    requestBody.categories = selectedCategories;
+                }
+                
+                const response = await fetch('/chat_enhanced', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const result = await response.json();
+                console.log('Enhanced chat response:', result);
+
+                if (response.ok) {
+                    addMessage(result.response, 'ai', result.sources, result.chunks_used, result.metadata_info, result.categories_searched);
+                } else {
+                    addMessage(`Error: ${result.error || 'Unknown error'}`, 'ai');
+                }
+            } catch (error) {
+                console.error('Chat error:', error);
+                addMessage(`Error: ${error.message}`, 'ai');
+            }
+
+            isProcessing = false;
+            sendButton.textContent = originalText;
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+
+        function addMessage(content, type, sources = null, chunksUsed = null, metadataInfo = null, categoriesSearched = null) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}-message`;
+
+            if (type === 'ai') {
+                messageDiv.innerHTML = formatAIResponse(content);
+                
+                if (sources && sources.length > 0) {
+                    const sourcesDiv = document.createElement('div');
+                    sourcesDiv.className = 'sources';
+                    
+                    let sourcesText = `<strong>Sources:</strong> ${sources.join(', ')}`;
+                    if (chunksUsed) {
+                        sourcesText += `<br><strong>Chunks analyzed:</strong> ${chunksUsed}`;
+                    }
+                    if (categoriesSearched && categoriesSearched.length > 0) {
+                        sourcesText += `<br><strong>Categories searched:</strong> ${categoriesSearched.map(cat => categoryDefinitions[cat]).join(', ')}`;
+                    }
+                    
+                    sourcesDiv.innerHTML = sourcesText;
+                    messageDiv.appendChild(sourcesDiv);
+
+                    // Add metadata information if available
+                    if (metadataInfo && Object.keys(metadataInfo).length > 0) {
+                        const metadataDiv = document.createElement('div');
+                        metadataDiv.className = 'metadata-info';
+                        
+                        let metadataText = '<strong>Metadata Details:</strong><br>';
+                        Object.entries(metadataInfo).forEach(([filename, info]) => {
+                            metadataText += `${filename}: ${info.categories.join(', ')} (${info.chunks_used} chunks)<br>`;
+                        });
+                        
+                        metadataDiv.innerHTML = metadataText;
+                        messageDiv.appendChild(metadataDiv);
+                    }
+                }
+            } else {
+                messageDiv.textContent = content;
+            }
+
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Initialize when page loads
+        window.onload = function() {
+            initializeCategoryFilters();
+            loadDocuments();
+        };
+    </script>
+</body>
+</html>

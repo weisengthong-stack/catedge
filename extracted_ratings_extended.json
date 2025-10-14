@@ -1,0 +1,1051 @@
+[
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2016",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The company's financial performance and creditworthiness",
+    "rating_drivers_positive": [
+      "Strong market position and brand recognition",
+      "Diversified business segments with potential for growth"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels and leverage ratio",
+      "Dependence on a few key customers and suppliers",
+      "Competition from other retailers in the market"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in financial performance, such as increase in revenue or reduction in debt",
+      "Enhancement of corporate governance practices and risk management systems"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance, such as decline in revenue or increase in debt",
+      "Material adverse changes in the company's business or industry"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Corporate Entities (2015)",
+      "RAM Rating Criteria for Retail Companies (2014)"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin_Rationale_final (Dec 2016).pdf",
+    "extraction_timestamp": "2025-07-16T14:05:35.430279"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2019",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The company's financial performance and creditworthiness",
+    "rating_drivers_positive": [
+      "Strong market position and brand recognition",
+      "Diversified business segments with potential for growth"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels and interest burden",
+      "Competition from other retailers in the market"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in operating performance and profitability",
+      "Reduction in debt levels and interest costs"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in operating performance and profitability",
+      "Increase in debt levels and interest costs"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Corporate Issuers (2018)",
+      "RAM Rating Criteria for Retailers (2019)"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin_Rationale (Dec 2019).pdf",
+    "extraction_timestamp": "2025-07-16T14:06:15.625387"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2010",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Improvement in asset quality with a decrease in non-performing financing (NPF) ratio from 8.72% to 6.81%",
+      "Increase in net NPFs coverage from 67.59% to 81.96%",
+      "Enhancement of capital adequacy ratio from 12.89% to 17.05%"
+    ],
+    "rating_drivers_negative": [
+      "High dependence on interbank deposits, which may pose liquidity risks",
+      "Moderate credit risk profile due to exposure to various sectors"
+    ],
+    "rating_triggers_upgrade": [
+      "Sustained improvement in asset quality and reduction in NPF ratio below 5%",
+      "Enhancement of capital adequacy ratio above 18%",
+      "Increase in net financing margin above 3.5%"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in asset quality with an increase in NPF ratio above 10%",
+      "Decline in capital adequacy ratio below 12%",
+      "Decrease in net financing margin below 2.5%"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings' credit rating methodologies and criteria"
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "AAA",
+        "applicable_to": "Long-term financial institution rating"
+      },
+      {
+        "rating_level": "P1",
+        "applicable_to": "Short-term financial institution rating"
+      }
+    ],
+    "source_file": "Bank Muamalat (April 2010 Rationale).pdf",
+    "extraction_timestamp": "2025-07-16T14:07:01.953386"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2019",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The rating reflects the bank's financial performance and stability.",
+    "rating_drivers_positive": [
+      "Strong capital adequacy ratio",
+      "Good asset quality with low non-performing loans",
+      "Stable funding profile"
+    ],
+    "rating_drivers_negative": [
+      "High concentration of risk in certain sectors",
+      "Dependence on wholesale funding",
+      "Limited geographic diversification"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in capital adequacy ratio to above 16%",
+      "Reduction in non-performing loans to below 5%",
+      "Increase in customer deposits to above 95% of total deposits"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in asset quality with non-performing loans exceeding 10%",
+      "Decrease in capital adequacy ratio to below 14%",
+      "Significant increase in wholesale funding costs"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Banks (2018)",
+      "International Financial Reporting Standards (IFRS)"
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "A-",
+        "applicable_to": "Long-term rating"
+      },
+      {
+        "rating_level": "P1",
+        "applicable_to": "Short-term rating"
+      }
+    ],
+    "source_file": "Bank Muamalat_ June 2019.pdf",
+    "extraction_timestamp": "2025-07-16T14:07:48.862895"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2014",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The company's financial performance and debt levels",
+    "rating_drivers_positive": [
+      "Strong brand recognition and market position",
+      "Diversified business operations across various sectors"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels and leverage",
+      "Dependence on a few key customers and suppliers",
+      "Intense competition in the retail industry"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in financial performance, such as increased revenue or profitability",
+      "Reduction in debt levels or leverage",
+      "Expansion into new markets or sectors"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance, such as decreased revenue or profitability",
+      "Increase in debt levels or leverage",
+      "Loss of key customers or suppliers"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Services Berhad's rating methodologies and criteria"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin Rationale_Dec 2014.pdf",
+    "extraction_timestamp": "2025-07-16T14:08:29.522379"
+  },
+  {
+    "company_name": "AEON CO. (M) BHD.",
+    "assessment_year": "2018",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong financial performance with revenue growth and improved profitability",
+      "Diversified business operations with a presence in retail, property development, and other sectors",
+      "Good corporate governance practices"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels and leverage ratio",
+      "Dependence on external funding for business expansion",
+      "Competition from other retailers and market players"
+    ],
+    "rating_triggers_upgrade": [
+      "Sustained improvement in financial performance, including revenue growth and profitability",
+      "Successful implementation of strategic initiatives to drive business growth",
+      "Enhanced corporate governance practices"
+    ],
+    "rating_triggers_downgrade": [
+      "Material decline in financial performance, including revenue or profitability",
+      "Failure to implement strategic initiatives to drive business growth",
+      "Deterioration in corporate governance practices"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Corporate Entities (2018)",
+      "RAM Rating Criteria for Retail Companies (2017)"
+    ],
+    "specific_ratings": [],
+    "source_file": "AEON_Rationale (Apr 2018).pdf",
+    "extraction_timestamp": "2025-07-16T14:09:12.044567"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2016",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong capital position and liquidity profile",
+      "Good asset quality with low gross impaired financing ratio"
+    ],
+    "rating_drivers_negative": [
+      "High dependence on short-term funding",
+      "Concentration risk in certain sectors"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in asset quality and reduction in non-performing loans",
+      "Enhancement of capital adequacy and liquidity profile"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in asset quality and increase in non-performing loans",
+      "Weakening of capital adequacy and liquidity profile"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Banks (2015)",
+      "RAM Rating Methodology for Islamic Financial Institutions (2014)"
+    ],
+    "specific_ratings": [],
+    "source_file": "Bank Muamalat rationale (May 2016).pdf",
+    "extraction_timestamp": "2025-07-16T14:09:51.823101"
+  },
+  {
+    "company_name": "AEON CO. (M) BHD.",
+    "assessment_year": "2019",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "The company's strong market position and brand recognition",
+      "Its diversified business segments, including retail, financial services, and logistics",
+      "A stable cash flow generation and a solid balance sheet"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels and interest expenses",
+      "Competition from other retailers and e-commerce platforms",
+      "Regulatory risks and potential changes in consumer behavior"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in the company's profitability and cash flow generation",
+      "Successful expansion into new markets or segments",
+      "Enhanced brand recognition and market share"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in the company's financial performance, such as declining sales or profits",
+      "Increased competition from other retailers or e-commerce platforms",
+      "Regulatory changes that negatively impact the company's business"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Services Berhad's rating methodologies and criteria for corporate issuers"
+    ],
+    "specific_ratings": [],
+    "source_file": "AEON_Rationale (final).pdf",
+    "extraction_timestamp": "2025-07-16T14:10:35.584597"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2013",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong financial performance",
+      "Good management team",
+      "Growing market share"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels",
+      "Dependence on a few key customers",
+      "Competition from other retailers"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in financial performance",
+      "Increased market share",
+      "Successful expansion into new markets"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance",
+      "Loss of key customers or suppliers",
+      "Failure to adapt to changing market conditions"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings' credit rating methodologies and criteria"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin (Jan 2013).pdf",
+    "extraction_timestamp": "2025-07-16T14:11:15.120299"
+  },
+  {
+    "company_name": "Hong Leong Investment Bank Berhad",
+    "assessment_year": "2023",
+    "assessment_month": "August",
+    "rating_action_basis": "The affirmation of Hong Leong Investment Bank Berhad’s (HLIB or the Bank) financial institution ratings (FIRs) is premised on its strategic role as Hong Leong Financial Group’s (HLFG or the Group) investment banking and stockbroking arm.",
+    "rating_drivers_positive": [
+      "Ready support from HLFG",
+      "Robust capitalisation",
+      "Solid asset quality"
+    ],
+    "rating_drivers_negative": [
+      "Inherently volatile earnings",
+      "Modest investment banking and stockbroking franchise"
+    ],
+    "rating_triggers_upgrade": [],
+    "rating_triggers_downgrade": [
+      "The Bank’s ratings will be downgraded if the Group’s ratings are lowered or if the Bank’s importance to the Group diminishes."
+    ],
+    "esg_descriptor": "Neutral",
+    "related_criteria": [
+      "Banking Quarterly Roundup (1Q 2023), June 2023",
+      "Banking Insight: On Steady Footing, March 2023",
+      "Group Rating Methodology for Banks, June 2015",
+      "Financial Institutions, December 2008"
+    ],
+    "specific_ratings": [
+      {
+        "rating": "AAA/Stable/P1",
+        "applicable_to": "Entity Ratings Financial Institution Ratings"
+      }
+    ],
+    "source_file": "Sample Report 5.pdf",
+    "extraction_timestamp": "2025-07-16T14:11:54.210588"
+  },
+  {
+    "company_name": "Hong Leong Investment Bank Berhad",
+    "assessment_year": "2024",
+    "assessment_month": "May",
+    "rating_action_basis": "RAM Ratings has assigned an AA1/Stable rating to the proposed Tranche 3 issuance from Hong Leong Investment Bank Berhad’s (HLIB or the Bank) existing unrated RM1 bil Multi-Currency Tier-2 Subordinated Notes Programme (2014/2039) (the Programme).",
+    "rating_drivers_positive": [
+      "Ready support from HLFG.",
+      "Robust capitalisation.",
+      "Solid asset quality."
+    ],
+    "rating_drivers_negative": [
+      "Volatile earnings."
+    ],
+    "rating_triggers_upgrade": [],
+    "rating_triggers_downgrade": [
+      "The issue rating will be downgraded if the Group’s ratings are lowered or if the Bank’s importance to the Group diminishes.",
+      "If the Group’s ratings are lowered"
+    ],
+    "esg_descriptor": "Banks indirectly exposed to environmental and social risks. Banks’ exposure to environmental and social risks stems primarily from investments or financing exposures to borrowers in various economic sectors, misconduct in marketing and customer privacy.",
+    "related_criteria": [
+      "Banking Quarterly Roundup (4Q 2023), March 2024",
+      "Banking Insight: Staying the Course, March 2024",
+      "Group Rating Methodology for Banks, June 2015",
+      "FAQ: Methodology for Rating Bank Securities, May 2015",
+      "Rating Bank Securities, November 2013",
+      "Financial Institutions, December 2008"
+    ],
+    "specific_ratings": [
+      {
+        "rating": "AA1/Stable/P1",
+        "applicable_to": "Proposed Tranche 3 issuance from Hong Leong Investment Bank Berhad’s (HLIB or the Bank) existing unrated RM1 bil Multi-Currency Tier-2 Subordinated Notes Programme (2014/2039)"
+      }
+    ],
+    "source_file": "Sample Report 4.pdf",
+    "extraction_timestamp": "2025-07-16T14:12:40.144562"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2017",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The company's financial performance and debt profile.",
+    "rating_drivers_positive": [
+      "Strong brand recognition and market share in the retail industry",
+      "Diversified revenue streams from various business segments",
+      "Efficient management of working capital"
+    ],
+    "rating_drivers_negative": [
+      "High leverage and interest burden",
+      "Dependence on a few key customers and suppliers",
+      "Competition from other retailers and e-commerce platforms"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in operating profitability and cash flow generation",
+      "Reduction in debt levels and interest expenses",
+      "Expansion of market share and customer base"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance, including declining revenue and profitability",
+      "Increase in debt levels and interest expenses",
+      "Material changes to the company's business model or operations"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Corporate Entities (2016)",
+      "RAM Rating Criteria for Retail Companies (2015)"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin Rationale (Dec 2017).pdf",
+    "extraction_timestamp": "2025-07-16T14:13:22.842279"
+  },
+  {
+    "company_name": "Country Garden Holdings Company Limited",
+    "assessment_year": "2024",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "The entity is in a business that positively and meaningfully contributes to environmental and/or social objectives or ESG factors that have positive credit implications and are likely a positive rating driver."
+    ],
+    "rating_drivers_negative": [
+      "ESG risks have a very strong influence over the credit profile of the entity and are already a key negative rating driver or have triggered a rating action.",
+      "ESG risks have some bearing on the credit profile of the entity. Mitigation/adaptation efforts only partially diffuse these risks and/or prevailing conditions continue to support the entity's business and financial profiles."
+    ],
+    "rating_triggers_upgrade": [
+      "Supportive",
+      "Neutral"
+    ],
+    "rating_triggers_downgrade": [
+      "Sensitive",
+      "Vulnerable"
+    ],
+    "esg_descriptor": "ESG risks have a very strong influence over the credit profile of the entity and are already a key negative rating driver or have triggered a rating action.",
+    "related_criteria": [
+      "Guidelines on Unlisted Capital Market Products Under the Lodge and Launch Framework effective 15 June 2015, issued by the Securities Commission Malaysia"
+    ],
+    "specific_ratings": [],
+    "source_file": "Sample Report 1.pdf",
+    "extraction_timestamp": "2025-07-16T14:14:04.569077"
+  },
+  {
+    "company_name": "Country Garden Real Estate Sdn Bhd",
+    "assessment_year": "2025",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "The entity is in a business that positively and meaningfully contributes to environmental and/or social objectives or ESG factors that have positive credit implications and are likely a positive rating driver."
+    ],
+    "rating_drivers_negative": [
+      "ESG risks have some bearing on the credit profile of the entity. Mitigation/adaptation efforts only partially diffuse these risks and/or prevailing conditions continue to support the entity's business and financial profiles.",
+      "ESG risks have considerable bearing on the credit profile of the entity. Mitigation/adaptation efforts are insufficient to diffuse these risks."
+    ],
+    "rating_triggers_upgrade": [
+      "Mitigation/adaptation efforts only partially diffuse ESG risks",
+      "Prevailing conditions continue to support the entity's business and financial profiles"
+    ],
+    "rating_triggers_downgrade": [
+      "ESG risks have considerable bearing on the credit profile of the entity",
+      "Mitigation/adaptation efforts are insufficient to diffuse these risks"
+    ],
+    "esg_descriptor": "Sensitive",
+    "related_criteria": [
+      "Guidelines on Unlisted Capital Market Products Under the Lodge and Launch Framework effective 15 June 2015, issued by the Securities Commission Malaysia, as may be amended or substituted from time to time."
+    ],
+    "specific_ratings": [],
+    "source_file": "Sample Report 3.pdf",
+    "extraction_timestamp": "2025-07-16T14:14:47.653550"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2012",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong capacity to meet its financial obligations",
+      "Resilient against adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_drivers_negative": [
+      "More susceptible to adverse changes in circumstances, economic conditions and/or operating environments than those in higher-rated categories",
+      "Highly vulnerable to adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in financial performance or stability",
+      "Enhanced risk management practices"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance or stability",
+      "Weakened risk management practices"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings' credit opinions and analytical processes are committed to preserving objectivity, integrity and independence of its ratings."
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "AA1",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "P1",
+        "rating_category": "Short-Term Rating"
+      }
+    ],
+    "source_file": "Bank Muamalat rationale (June 2012).pdf",
+    "extraction_timestamp": "2025-07-16T14:16:06.305166"
+  },
+  {
+    "company_name": "Country Garden Holdings Company Limited",
+    "assessment_year": "2022",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Diversified land bank",
+      "Existing land bank largely in lower-tier cities in key economic regions"
+    ],
+    "rating_drivers_negative": [
+      "High gearing ratio",
+      "Limited impact of ESG risks on credit profile"
+    ],
+    "rating_triggers_upgrade": [],
+    "rating_triggers_downgrade": [
+      "Material decline in revenue or profitability",
+      "Significant increase in debt levels or gearing ratio"
+    ],
+    "esg_descriptor": "Sensitive",
+    "related_criteria": [
+      "Guidelines on Unlisted Capital Market Products Under the Lodge and Launch Framework, effective 15 June 2015, issued by the Securities Commission Malaysia"
+    ],
+    "specific_ratings": [],
+    "source_file": "Sample Report 2.pdf",
+    "extraction_timestamp": "2025-07-16T14:16:44.437859"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2018",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The receipt of this compensation has no influence on RAM Ratings' credit opinions or other analytical processes.",
+    "rating_drivers_positive": [
+      "Improved profitability and cash flow generation",
+      "Strong market position and brand recognition"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels and leverage",
+      "Dependence on a few key customers and suppliers",
+      "Intense competition in the retail industry"
+    ],
+    "rating_triggers_upgrade": [
+      "Significant improvement in profitability and cash flow generation",
+      "Reduced debt levels and improved financial flexibility"
+    ],
+    "rating_triggers_downgrade": [
+      "Material decline in sales or revenue",
+      "Increased debt levels or reduced financial flexibility"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Services Berhad's rating methodologies and criteria"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin - Dec 2018 (Final).pdf",
+    "extraction_timestamp": "2025-07-16T14:17:25.316258"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2015",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The company's financial performance and debt levels.",
+    "rating_drivers_positive": [
+      "Strong revenue growth",
+      "Improved operating profit margins"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels",
+      "Dependence on a few key customers",
+      "Challenging market conditions"
+    ],
+    "rating_triggers_upgrade": [
+      "Sustained improvement in financial performance",
+      "Reduced debt levels",
+      "Diversification of revenue streams"
+    ],
+    "rating_triggers_downgrade": [
+      "Decline in revenue growth",
+      "Increased debt levels",
+      "Failure to diversify revenue streams"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Services Berhad's rating methodologies and criteria"
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin_Rationale_Dec2015.pdf",
+    "extraction_timestamp": "2025-07-16T14:18:06.016871"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2011",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "The financial institution is resilient against adverse changes in circumstances, economic conditions and/or operating environments.",
+      "The issuer has a superior capacity to meet its financial obligations."
+    ],
+    "rating_drivers_negative": [
+      "The financial institution is more susceptible to adverse changes in circumstances, economic conditions and/or operating environments than those in higher-rated categories.",
+      "The issuer is highly vulnerable to adverse changes in circumstances, economic conditions and/or operating environments."
+    ],
+    "rating_triggers_upgrade": [
+      "A significant improvement in the financial institution's credit profile, such as a substantial increase in capital or a reduction in debt levels.",
+      "A change in government policies that would benefit the financial institution's business operations."
+    ],
+    "rating_triggers_downgrade": [
+      "A deterioration in the financial institution's credit profile, such as a decline in capital or an increase in debt levels.",
+      "A change in economic conditions that would negatively impact the financial institution's business operations."
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings' current opinion on the overall capacity of a financial institution to meet its financial obligations.",
+      "The issuer's creditworthiness is reflected in the overall capacity and willingness to meet the payment of capital and expected returns."
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "AAA",
+        "rating_category": "Long-Term Ratings"
+      },
+      {
+        "rating_level": "P1",
+        "rating_category": "Short-Term Ratings"
+      }
+    ],
+    "source_file": "Bank Muamalat (May 2011 Rationale) Final Rating.pdf",
+    "extraction_timestamp": "2025-07-16T14:18:55.788968"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2009",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "The financial institution is resilient against adverse changes in circumstances, economic conditions and/or operating environments.",
+      "The issuer is highly dependent on favourable changes in circumstances, economic conditions and/or operating environments, the lack of which would likely result in it defaulting on its financial obligations."
+    ],
+    "rating_drivers_negative": [
+      "The financial institution is more susceptible to adverse changes in circumstances, economic conditions and/or operating environments than those in higher-rated categories.",
+      "The issuer faces major uncertainties that could compromise its capacity for payment of a particular sukuk."
+    ],
+    "rating_triggers_upgrade": [
+      "A significant improvement in the financial institution's credit profile, such as an increase in capital adequacy ratio or a reduction in non-performing loans.",
+      "A change in government policies or regulations that would positively impact the financial institution's business operations."
+    ],
+    "rating_triggers_downgrade": [
+      "A deterioration in the financial institution's credit profile, such as a decrease in capital adequacy ratio or an increase in non-performing loans.",
+      "A change in government policies or regulations that would negatively impact the financial institution's business operations."
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings applies subscripts 1, 2 or 3 in each rating category from AA to C.",
+      "An Issue Rating for a debt-based sukuk is RAM Ratings' current opinion on the creditworthiness of a particular debt-based sukuk."
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "AAA",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "AA",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "A",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "BBB",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "BB",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "B",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "C",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "D",
+        "applicable_to": "Long-term ratings"
+      },
+      {
+        "rating_level": "P1",
+        "applicable_to": "Short-term ratings"
+      },
+      {
+        "rating_level": "P2",
+        "applicable_to": "Short-term ratings"
+      },
+      {
+        "rating_level": "P3",
+        "applicable_to": "Short-term ratings"
+      }
+    ],
+    "source_file": "Bank Muamalat (March 2009).pdf",
+    "extraction_timestamp": "2025-07-16T14:19:59.115044"
+  },
+  {
+    "company_name": "AEON CO (M) BHD",
+    "assessment_year": "2020",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong financial performance with a net profit margin of 2.41%",
+      "Improved return on capital employed at 7.54%",
+      "Increased operating cash flow debt coverage ratio to 0.13"
+    ],
+    "rating_drivers_negative": [
+      "High gearing ratio of 1.81",
+      "Long payables cycle of 157.06 days",
+      "Dependence on non-cancellable operating leases"
+    ],
+    "rating_triggers_upgrade": [
+      "Sustained improvement in financial performance and debt management",
+      "Enhanced corporate governance practices",
+      "Increased market share and competitiveness"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance, particularly net profit margin",
+      "Increase in gearing ratio or debt levels",
+      "Material changes to business operations or strategy"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [],
+    "specific_ratings": [],
+    "source_file": "AEON (M) Rationale (2020) - Final.pdf",
+    "extraction_timestamp": "2025-07-16T14:20:40.372127"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Bhd",
+    "assessment_year": "2011",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "RAM Ratings receives compensation for its rating services, normally paid by the issuers of such securities or the rated entity, and sometimes third parties participating in marketing the securities, insurers, guarantors, other obligors, underwriters, etc.",
+    "rating_drivers_positive": [
+      "The issuer is resilient against adverse changes in circumstances, economic conditions and/or operating environments",
+      "The issuer has a limited ability to withstand adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_drivers_negative": [
+      "The issuer is highly vulnerable to adverse changes in circumstances, economic conditions and/or operating environments",
+      "The issuer faces major uncertainties that could compromise its capacity for fulfilling the terms of the investment contract"
+    ],
+    "rating_triggers_upgrade": [
+      "A sukuk rated AA has high safety for payment of capital and expected returns. The issuer is resilient against adverse changes in circumstances, economic conditions and/or operating environments.",
+      "A sukuk rated A has adequate safety for payment of capital and expected returns."
+    ],
+    "rating_triggers_downgrade": [
+      "A sukuk rated BB has low safety for payment of capital and expected returns. The issuer is highly vulnerable to adverse changes in circumstances, economic conditions and/or operating environments.",
+      "A sukuk rated B has very low safety for payment of capital and expected returns."
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings applies subscripts 1, 2 or 3 in each rating category from AA to C. The subscript 1 indicates that the issue ranks at the higher end of its generic rating category; the subscript 2 indicates a mid-ranking; and the subscript 3 indicates that the issue ranks at the lower end of its generic rating category.",
+      "RAM Ratings applies the suffixes (bg) or (s) to ratings which have been enhanced by a bank guarantee or other supports, respectively."
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "AAA",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "AA",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "A",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "BBB",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "BB",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "B",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "C",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "D",
+        "rating_category": "Long-Term Rating"
+      },
+      {
+        "rating_level": "P1",
+        "rating_category": "Short-Term Rating"
+      },
+      {
+        "rating_level": "P2",
+        "rating_category": "Short-Term Rating"
+      },
+      {
+        "rating_level": "P3",
+        "rating_category": "Short-Term Rating"
+      },
+      {
+        "rating_level": "NP",
+        "rating_category": "Short-Term Rating"
+      }
+    ],
+    "source_file": "Mydin - Rationale (final rating)_Nov 2011.pdf",
+    "extraction_timestamp": "2025-07-16T14:21:45.965140"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2013",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong capacity to meet its financial obligations",
+      "Resilient against adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_drivers_negative": [
+      "More susceptible to adverse changes in circumstances, economic conditions and/or operating environments than those in higher-rated categories",
+      "Highly vulnerable to adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_triggers_upgrade": [
+      "Reinvestment of dividends amounting to RM195 million as ordinary shares"
+    ],
+    "rating_triggers_downgrade": [
+      "Deteriorating circumstances",
+      "Adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings' current opinion on the overall capacity of a financial institution to meet its financial obligations",
+      "RAM Ratings' sukuk ratings are not a measure of compliance with Shariah principles or the role, formation, practices, legitimacy and soundness of the Shariah advisors' recommendations and decisions"
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "AAA",
+        "rating_category": "Long-Term Rating",
+        "applicable_to": "Financial Institution Ratings"
+      },
+      {
+        "rating_level": "P1",
+        "rating_category": "Short-Term Rating",
+        "applicable_to": "Financial Institution Ratings"
+      }
+    ],
+    "source_file": "Bank Muamalat_Rationale_Aug 2013 (final).pdf",
+    "extraction_timestamp": "2025-07-16T14:22:31.485668"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2014",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong capacity to meet financial obligations",
+      "Resilient against adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_drivers_negative": [
+      "Susceptible to adverse changes in circumstances, economic conditions and/or operating environments",
+      "Highly vulnerable to adverse changes in circumstances, economic conditions and/or operating environments"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in financial performance",
+      "Enhancement of management team or governance structure"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance",
+      "Weakening of management team or governance structure"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings' credit opinions and analytical processes are influenced by no external factors, including compensation from issuers or third parties."
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "P1",
+        "rating_category": "Short-term"
+      },
+      {
+        "rating_level": "AA",
+        "rating_category": "Long-term"
+      }
+    ],
+    "source_file": "Bank Muamalat rationale (July 2014).pdf",
+    "extraction_timestamp": "2025-07-16T14:23:15.716487"
+  },
+  {
+    "company_name": "AEON CO. (M) BHD.",
+    "assessment_year": "2017",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The receipt of this compensation has no influence on RAM Ratings' credit opinions or other analytical processes.",
+    "rating_drivers_positive": [
+      "Strong financial performance",
+      "Good management team",
+      "Diversified business operations"
+    ],
+    "rating_drivers_negative": [
+      "High debt levels",
+      "Dependence on a few key customers",
+      "Competition in the retail industry"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in financial performance",
+      "Successful expansion into new markets",
+      "Enhanced management team and governance structure"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in financial performance",
+      "Increased competition from new entrants",
+      "Material changes to the company's business model or strategy"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Services Berhad Suite 20.01, Level 20 The Garden South Tower Mid Valley City, Lingkaran Syed Putra 59200 Kuala Lumpur T: (603) 7628 1000 / (603) 2299 1000 F: (603) 7620 8251 E: ramratings@ram.com.my W: www.ram.com.my"
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "Not mentioned in the document",
+        "applicable_to": ""
+      }
+    ],
+    "source_file": "AEON_Rationale (Apr 2017).pdf",
+    "extraction_timestamp": "2025-07-16T14:24:00.364068"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2018",
+    "assessment_month": "March",
+    "rating_action_basis": "Not mentioned in the document",
+    "rating_drivers_positive": [
+      "Strong capital position with a common equity tier-1 (CET1) ratio of 16.04%",
+      "Improved asset quality with a gross impaired financing ratio of 1.92%",
+      "Enhanced liquidity and funding profile"
+    ],
+    "rating_drivers_negative": [
+      "High concentration in consumer finance segment",
+      "Dependence on interest rates for profitability",
+      "Regulatory challenges and potential impact on business operations"
+    ],
+    "rating_triggers_upgrade": [
+      "Sustained improvement in asset quality and credit performance",
+      "Enhanced capital adequacy and liquidity profile",
+      "Successful implementation of strategic initiatives to drive growth and profitability"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in asset quality and credit performance",
+      "Weakening of capital adequacy and liquidity profile",
+      "Material adverse changes in business operations or regulatory environment"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Banks (2018)",
+      "RAM Rating Criteria for Capital Adequacy (2018)"
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "A-",
+        "applicable_to": "Long-term deposit rating"
+      },
+      {
+        "rating_level": "P1",
+        "applicable_to": "Short-term deposit rating"
+      }
+    ],
+    "source_file": "Bank Muamalat rationale 2018_final.pdf",
+    "extraction_timestamp": "2025-07-16T14:24:44.929486"
+  },
+  {
+    "company_name": "Bank Muamalat Malaysia Berhad",
+    "assessment_year": "2015",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "The rating is based on the bank's financial performance and other relevant factors.",
+    "rating_drivers_positive": [
+      "Strong capital adequacy ratio",
+      "Good asset quality with low non-performing loans",
+      "Satisfactory profitability"
+    ],
+    "rating_drivers_negative": [
+      "High loan-to-deposit ratio",
+      "Dependence on wholesale funding",
+      "Regulatory challenges in the banking sector"
+    ],
+    "rating_triggers_upgrade": [
+      "Improvement in capital adequacy ratio to above 15%",
+      "Reduction in non-performing loans to below 2%",
+      "Increase in profitability by more than 10%"
+    ],
+    "rating_triggers_downgrade": [
+      "Deterioration in asset quality with non-performing loans exceeding 5%",
+      "Decline in capital adequacy ratio to below 12%",
+      "Significant increase in regulatory challenges"
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Rating Methodology for Banks (2014)",
+      "RAM Rating Criteria for Islamic Financial Institutions (2013)"
+    ],
+    "specific_ratings": [
+      {
+        "rating_level": "BBB-",
+        "applicable_to": "Long-term rating"
+      },
+      {
+        "rating_level": "P2",
+        "applicable_to": "Short-term rating"
+      }
+    ],
+    "source_file": "Bank Muamalat rationale (July 2015).pdf",
+    "extraction_timestamp": "2025-07-16T14:25:28.541627"
+  },
+  {
+    "company_name": "Mydin Mohamed Holdings Berhad",
+    "assessment_year": "2014",
+    "assessment_month": "Not mentioned in the document",
+    "rating_action_basis": "RAM Ratings applies subscripts 1, 2 or 3 in each rating category from AA to C.",
+    "rating_drivers_positive": [
+      "The issuer is resilient against adverse changes in circumstances, economic conditions and/or operating environments.",
+      "The issuer has a limited ability to withstand adverse changes in circumstances, economic conditions and/or operating environments."
+    ],
+    "rating_drivers_negative": [
+      "The issuer faces major uncertainties that could compromise its capacity for fulfilling the terms of the investment contract.",
+      "The D rating may also reflect a distressed exchange, the filing of bankruptcy and/or other actions pertaining to the issuer that could jeopardise the fulfilment of the investment contract's terms."
+    ],
+    "rating_triggers_upgrade": [
+      "RAM Ratings applies subscripts 1, 2 or 3 in each rating category from AA to C.",
+      "The issuer is resilient against adverse changes in circumstances, economic conditions and/or operating environments."
+    ],
+    "rating_triggers_downgrade": [
+      "The issuer faces major uncertainties that could compromise its capacity for fulfilling the terms of the investment contract.",
+      "The D rating may also reflect a distressed exchange, the filing of bankruptcy and/or other actions pertaining to the issuer that could jeopardise the fulfilment of the investment contract's terms."
+    ],
+    "esg_descriptor": "Not mentioned in the document",
+    "related_criteria": [
+      "RAM Ratings applies subscripts 1, 2 or 3 in each rating category from AA to C.",
+      "The receipt of this compensation has no influence on RAM Ratings' credit opinions or other analytical processes."
+    ],
+    "specific_ratings": [],
+    "source_file": "Mydin Rationale (Jan 2014).pdf",
+    "extraction_timestamp": "2025-07-16T14:26:15.664269"
+  }
+]

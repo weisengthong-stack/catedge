@@ -1,0 +1,36 @@
+{
+  "active": true,
+  "profileReferenceId": "33551-H",
+  "other": {
+    "entityType": "PRIVATE COMPANY",
+    "corporateWebsite": null,
+    "fatfjurisdiction": "MALAYSIA",
+    "industry": "INVESTMENT HOLDING AND DISTRIBUTION OF JEWELLERY",
+    "onBoardingMode": null,
+    "ownershipStructureLayer": null,
+    "paymentMode": null,
+    "productServiceComplexity": "SIMPLE",
+    "sourceOfFunds": null,
+    "natureOfBusinessRelationship": null,
+    "bankAccount": null,
+    "additionalInformation": null
+  },
+  "particular": {
+    "incorporated": true,
+    "name": "TOMEI GOLD &JEWELLERY HOLDINGS (M) SDN. BHD.",
+    "alias": null,
+    "formerName": "TOMEI GOLD &JEWELLERY HOLDING (M) SDN. BHD.",
+    "countryOfIncorporation": "MALAYSIA",
+    "countryOfOperation": "MALAYSIA",
+    "address": "SO-26-02, MENARA 1, NO. 3 JALAN BANGSAR, KL ECO CITY, 59200 KUALA LUMPUR, W.P. KUALA LUMPUR, MALAYSIA",
+    "incorporateNumber": "33551-H",
+    "phone": "0323812188",
+    "email": "acecosec@gmail.com",
+    "dateOfIncorporation": null,
+    "dateOfIncorporationExpiry": null,
+    "imonumber": null
+  },
+  "type": "CORPORATE",
+  "domainId": null,
+  "assigneeId": null
+}
