@@ -30,7 +30,6 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # ========== CONFIGURATION ==========
 # Set API key for LlamaExtract
-os.environ["LLAMA_CLOUD_API_KEY"] = "llx-umPayGgM0OvbqH6sUJj9t6mgMZLOsLCAMBpSnjUGJKB2WC8J"
 
 # File paths (all files in same folder)
 CURRENT_DIR = Path(__file__).parent if '__file__' in globals() else Path.cwd()
