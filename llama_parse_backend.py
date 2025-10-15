@@ -30,7 +30,6 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # Set API key
-os.environ["LLAMA_CLOUD_API_KEY"] = "llx-umPayGgM0OvbqH6sUJj9t6mgMZLOsLCAMBpSnjUGJKB2WC8J"
 
 NBSP = "\u00A0"
 
